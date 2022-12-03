@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+
+    &__title {
+        padding: 0 1rem;
+        font-weight: 700;
+    }
+}
+
+
+.menu-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        padding: .5rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .uil {
+        color: var(--color-info-dark);
+    }
+    
+}
+
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+
+    &__img {
+        width: 35px;
+        height: 35px;
+        border-radius: 100px;
+        object-fit: cover;
+    }
+}
+
+.options-menu {
+    
+}
