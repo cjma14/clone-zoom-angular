@@ -1,24 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { RoomComponent } from './pages/room/room.component';
-import { VideoPlayerComponent } from './components/video-player/video-player.component';
-import { MenuBottomComponent } from './components/menu-bottom/menu-bottom.component';
+import { LayoutModule } from './core/layout/layout.module';
+import { appRoutes } from './app.routing';
+
+
+const routerConfig: ExtraOptions = {
+  preloadingStrategy: PreloadAllModules,
+  scrollPositionRestoration: 'enabled'
+};
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    RoomComponent,
-    VideoPlayerComponent,
-    MenuBottomComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes, routerConfig),
+
+    // Layout module of your application
+    LayoutModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
