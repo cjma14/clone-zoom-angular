@@ -11,11 +11,6 @@ export class RoomVideoPlayerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  thereAreMediaDevices() {
-    return Boolean(navigator?.mediaDevices)
-  }
+  ngOnInit(): void {}
 
 }
